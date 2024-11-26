@@ -142,3 +142,55 @@
 // console.log(!V); // Si no es Verdadero => false
 // console.log(!F); // Si no es False => true
 
+//39. Pide al usuario que ingrese su mes de nacimiento y muestra su 
+//    signo zodiacal en la consola.
+
+let mes;
+do {
+    mes = parseInt(prompt("Ingrese su mes de Nacimiento (1-12)"));
+    if (isNaN(mes) || mes < 1 || mes > 12) {
+        alert("Por favor, ingrese un Número del 1 al 12");
+    }
+
+} while (isNaN(mes) || mes < 1 || mes > 12);
+
+switch (mes) {
+    case 1:
+        console.log("Tu signo sodiacal es Capricornio o Acuario");
+        break;
+    case 2:
+        console.log("Tu signo sodiacal es Acuario o Pisis");
+        break;
+    case 3:
+        console.log("Tu signo sodiacal es Pisis o Aries");
+        break;
+    case 4:
+        console.log("Tu signo sodiacal es Aries o Tauro");
+        break;
+    case 5:
+        console.log("Tu signo sodiacal es Tauro o Géminis");
+        break;
+    case 6:
+        console.log("Tu signo sodiacal es Géminis o Cáncer");
+        break;
+    case 7:
+        console.log("Tu signo sodiacal es Cáncer o Leo");
+        break;
+    case 8:
+        console.log("Tu signo sodiacal es Leo o Virgo");
+        break;
+    case 9:
+        console.log("Tu signo sodiacal es Virgo o Libra");
+        break;
+    case 10:
+        console.log("Tu signo sodiacal es Libra o Escorpio");
+        break;
+    case 11:
+        console.log("Tu signo sodiacal es Escorpio o Sagitario");
+        break;
+    case 12:
+        console.log("Tu signo sodiacal es Sagitario o Capricornio");
+        break;
+    default:
+        console.log("Por favor, ingrese un numero valido del 1 al 12");
+}

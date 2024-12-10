@@ -1,273 +1,164 @@
-// Funciones
+// Arrays
 
-// const numeroA = 10;
-// const numeroB = 12;
+const miArrayDeNumeros = [1, 2, -10, 0, 2.2, 8, -14, 0, 1, 99];
 
-// const resultado = numeroA + numeroB;
-// console.log("Felicitaciones, el resultado es " + resultado);
+// console.log(typeof miArrayDeNumeros);
 
+// miArrayDeNumeros = [5];
+// console.log(miArrayDeNumeros);
 
-// const numeroC = 1025;
-// const numeroD = 412;
+// Los Arrays tienen sus propios metodos (funciones)
+miArrayDeNumeros.push(5);
+miArrayDeNumeros.push(99);
+miArrayDeNumeros.push(10111);
+miArrayDeNumeros.pop(); // Elimina el ultimo indice 
+miArrayDeNumeros.shift(); // Elimina el 1er Elemento (No es recomendable)
+miArrayDeNumeros.unshift(1); // Agrega en el Indice 0 (No es recomendable)
 
-// const resultado1 = numeroC + numeroD;
-// console.log("Felicitaciones, el resultado es " + resultado1);
+// console.log(miArrayDeNumeros);
 
-// const numeroC1 = 1335;
-// const numeroD1 = 4912;
-
-// const resultado11 = numeroC1 + numeroD1;
-// console.log("Felicitaciones, el resultado es " + resultado11);
-
-/// Declarar la Funcion
-
-// Variables Globales
-// const numeroA = parseInt(prompt("Ingrese el 1er Numero"));
-// const numeroB = parseInt(prompt("Ingrese el 2do Numero"));
-// const resultado = numeroA + numeroB;
-
-// function sumar() {
-//     // Variables Locales
-//     const numeroA = parseInt(prompt("Ingrese el 1er Numero"));
-//     const numeroB = parseInt(prompt("Ingrese el 2do Numero"));
-//     const resultado = numeroA + numeroB;
-
-//     console.log("Felicitaciones, el resultado de la Suma es " + resultado);
+// console.log(miArrayDeNumeros.length); // Me devuelve un numero entero -> Es la cantidad de elementos de mi Array
+// console.log(miArrayDeNumeros[9]);
+// for(let i = 0; i < miArrayDeNumeros.length; i++) {
+//     console.log("En el indice: " + i + " esta el valor: " + miArrayDeNumeros[i]);
 // }
 
-// // for(let i = 0; i < 5; i++){
-// //     sumar();
-// // }
+// console.log(miArrayDeNumeros.join(" | "));
 
-// function restar() {
-//     // Variables Locales
-//     const numeroA = parseInt(prompt("Ingrese el 1er Numero"));
-//     const numeroB = parseInt(prompt("Ingrese el 2do Numero"));
-//     const resultado = numeroA - numeroB;
+// console.log(miArrayDeNumeros.indexOf(8)); // Retorna un numero entero -> Indice del elemento
+// console.log(miArrayDeNumeros.indexOf(2.2));
+// console.log(miArrayDeNumeros.indexOf(0));
+// console.log(miArrayDeNumeros.indexOf(99));
+// console.log(miArrayDeNumeros.indexOf(-99)); // Retorna -1 porque el valor no existe en el Array
 
-//     console.log("Felicitaciones, el resultado de la Resta es " + resultado);
-// }
-// function multiplicar() {
-//     // Variables Locales
-//     const numeroA = parseInt(prompt("Ingrese el 1er Numero"));
-//     const numeroB = parseInt(prompt("Ingrese el 2do Numero"));
-//     const resultado = numeroA * numeroB;
+// console.log(miArrayDeNumeros.includes(0)); // Retorna true si existe
+// console.log(miArrayDeNumeros.includes(-99)); // Retorna false si no existe
 
-//     console.log("Felicitaciones, el resultado de la Multiplicacion es " + resultado);
+
+const miArrayDeStrings = ["Hola", "Mundo", "Coderhouse"];
+// for(let i = 0; i < miArrayDeStrings.length; i++) {
+//     console.log("En el indice: " + i + " esta el valor: " + miArrayDeStrings[i]);
 // }
 
-// function dividir() {
-//     // Variables Locales
-//     const numeroA = parseInt(prompt("Ingrese el 1er Numero"));
-//     const numeroB = parseInt(prompt("Ingrese el 2do Numero"));
-//     const resultado = numeroA / numeroB;
-//     if(numeroB !== 0 ) {
-//         console.log("Felicitaciones, el resultado la Division es " + resultado);
-//     } else {
-//         console.error("Error, No se puede dividir por 0");
+// console.log(miArrayDeStrings.includes("Coderhouse")); 
+// console.log(miArrayDeStrings);
+// console.log(miArrayDeStrings.sort()); // Ordena Alfabeticamente -> (No es recomendable)
+// console.log(miArrayDeStrings.sort().reverse()); // Ordena Alfabeticamente en forma Descendente-> (No es recomendable)
+
+// Objeto
+
+// const producto = {
+//     id: 1,
+//     nombre: "Azucar",
+//     precio: 1200
+// }
+// console.log(producto);
+
+
+// const productos = [
+//     {
+//         id: 1,
+//         nombre: "Azucar",
+//         precio: 1200
+//     },
+//     {
+//         id: 2,
+//         nombre: "Yerba",
+//         precio: 1890
+//     },
+//     {
+//         id: 3,
+//         nombre: "Café",
+//         precio: 6500
+//     },
+//     {
+//         id: 4,
+//         nombre: "Coca Cola",
+//         precio: 1950
+//     },
+//     {
+//         id: 5,
+//         nombre: "Pepsi",
+//         precio: 1750
 //     }
-// }
-
-// /// Invocacion de las Funciones
-// sumar();
-// restar();
-// multiplicar();
-// dividir();
-
-// Funciones con parametros
-
-// Variables Globales
-// let numeroA = parseFloat(prompt("Ingrese el 1er Numero"));
-// let numeroB = parseFloat(prompt("Ingrese el 2do Numero"));
-//let operacion = prompt("Ingrese la Operacion: (+, -, * , /)");
+// ];
 
 
-// function validarResultado(p) { // retorna un Booleano
-//     if (isNaN(p)) {
-//         console.error("Error, Ingrese un numero valido");
-//         return false;
-//     } else {
-//         return true;
+// console.log(productos[0].id);
+// console.log(productos[0].nombre);
+// console.log(productos[0].precio);
+
+// productos.push(
+//     {
+//         id: 6,
+//         nombre: "Harina",
+//         precio: 1500,
+//         stock: 12000
 //     }
+// );
+
+// const productoNuevo = {
+//     id: 7,
+//     pais: "Argentina",
+//     provincia: "Bs As",
+//     ciudad: "Quilmes",
+//     nombre: "Cafetera",
+//     precio: 199999.99,
+//     stock: 6
 // }
 
-// function sumar(a, b){ // a y b son los parametros de la funcion
-//     resultado = a + b;
-//     console.log("Felicitaciones, el resultado de la Suma es " + resultado);
-// }
-// function restar(a, b){ // a y b son los parametros de la funcion
-//     resultado = a - b;
-//     console.log("Felicitaciones, el resultado de la Resta es " + resultado);
-// }
-// function multiplicar(a, b){ // a y b son los parametros de la funcion
-//     resultado = a * b;
-//     console.log("Felicitaciones, el resultado de la Multiplicacion es " + resultado);
-// }
-// function dividir(a, b){ // a y b son los parametros de la funcion
-//     if(b === 0) {
-//         console.error("Error, No se puede dividir por 0");
-//     } else {
-//         resultado = a / b;
-//         console.log("Felicitaciones, el resultado de la Division es " + resultado);
+// productos.push(productoNuevo);
+// productos.push(
+//     {
+//         id: 8,
+//         pais: "Argentina",
+//         provincia: "Bs As",
+//         ciudad: "Quilmes",
+//         nombre: "Cafetera",
+//         precio: 299000.99,
+//         stock: 16
 //     }
-// }
+// );
 
-// if(validarResultado(numeroA) && validarResultado(numeroB)){
-//     dividir(numeroA, numeroB); // Paso los Argumentos
-// } else {
-//     console.error("Error, Operacion cancelada debido a entradas invalidas.!")
-// }
+// console.log(productos);
 
+// Clase
+class Producto {
 
-// function calculadora(a, b, operacion) {
-
-//     if (validarResultado(a) && validarResultado(b)) {
-//         let resultado;
-//         switch (operacion) {
-//             case "+":
-//                 resultado = a + b;
-//                 console.log("Felicitaciones, el resultado de la Suma es " + resultado);
-//                 break;
-//             case "-":
-//                 resultado = a - b;
-//                 console.log("Felicitaciones, el resultado de la Resta es " + resultado);
-//                 break;
-//             case "*":
-//                 resultado = a * b;
-//                 console.log("Felicitaciones, el resultado de la Multiplicacion es " + resultado);
-//                 break;
-//             case "/":
-//                 if (b === 0) {
-//                     console.error("Error, No se puede dividir por 0");
-//                 } else {
-//                     resultado = a / b;
-//                     console.log("Felicitaciones, el resultado de la Division es " + resultado);
-//                 }
-//                 break;
-//             default:
-//                 console.error("Error, Operacion no valida.!")
-//         }
-
-//     } else {
-//         console.error("Error, Operacion cancelada debido a entradas invalidas.!")
-//     }
-// }
-
-// calculadora(numeroA, numeroB, operacion);
-
-
-
-// let numeroA = parseFloat(prompt("Ingrese el 1er Numero"));
-// let numeroB = parseFloat(prompt("Ingrese el 2do Numero"));
-
-// function sumar(a, b) {
-//     return console.log("Felicitaciones, el resultado de la Suma es " + (a + b)); // String
-// }
-
-// function sumar(a, b){
-//     return a + b; // Numero
-// }
-// console.log(sumar(numeroA, numeroB));
-
-
-// const sumar = function (a , b) {
-//     return a + b;
-// }
-
-// console.log(sumar(numeroA, numeroB));
-
-// const saludo = function(nombre){
-//     return "Hola " + nombre + ", como estas?";
-// }
-
-// console.log(saludo("Alejandro"));
-
-// Funciones Flecha (Retorno implisito)
-// const sumar = (a, b) => {
-//     return a + b;
-// }
-// const sumar = (a, b) => {
-//     const resultado = a + b 
-//     console.log(resultado)
-// }; // (Retorno implisito)
-
-// sumar(10, 12);
-
-// const sumar = (a, b) => a + b; // (Retorno implisito)
-
-// console.log(sumar(10, 12));
-
-
-
-
-
-// calculadora(numeroA, numeroB, operacion);
-
-let continuar;
-
-do {
-    let numeroA = parseFloat(prompt("Ingrese el 1er Numero"));
-    let numeroB = parseFloat(prompt("Ingrese el 2do Numero"));
-    let operacion = prompt("Ingrese la Operacion: (+, -, * , /)");
-
-    function validarResultado(p) { // retorna un Booleano
-        if (isNaN(p)) {
-            console.error("Error, Ingrese un numero valido");
-            return false;
-        } else {
-            return true;
-        }
+    constructor(id, nombre, precio, stock) {
+        this.id = id;
+        this.nombre = nombre
+        this.precio = precio
+        this.stock = stock
     }
 
-    function calculadora(a, b, operacion) {
-
-        if (validarResultado(a) && validarResultado(b)) {
-            let resultado;
-            switch (operacion) {
-                case "+":
-                    resultado = a + b;
-                    console.log("Felicitaciones, el resultado de la Suma es " + resultado);
-                    break;
-                case "-":
-                    resultado = a - b;
-                    console.log("Felicitaciones, el resultado de la Resta es " + resultado);
-                    break;
-                case "*":
-                    resultado = a * b;
-                    console.log("Felicitaciones, el resultado de la Multiplicacion es " + resultado);
-                    break;
-                case "/":
-                    if (b === 0) {
-                        console.error("Error, No se puede dividir por 0");
-                    } else {
-                        resultado = a / b;
-                        console.log("Felicitaciones, el resultado de la Division es " + resultado);
-                    }
-                    break;
-                default:
-                    console.error("Error, Operacion no valida.!")
-            }
-
-        } else {
-            console.error("Error, Operacion cancelada debido a entradas invalidas.!")
-        }
+    sumarIva() {
+        this.precio = parseFloat((this.precio * 1.21).toFixed(2));
     }
+}
 
-    calculadora(numeroA, numeroB, operacion);
+const productos = [];
 
-    
-//     do {
-//         continuar = prompt("Desea continuar (s/n)").toLowerCase();
-//         if(continuar !== 's' && continuar !== 'n'){
-//             console.error("Error, Entrada no valida. Por favor ingrese 's' o 'n'");
-//         }
+productos.push(new Producto(1, "Azucar", 1250, 10));
+productos.push(new Producto(2, "Yerba", 1890, 35));
+productos.push(new Producto(3, "Café", 6500, 50));
+productos.push(new Producto(4, "Coca Cola", 1980, 180));
 
-//     } while (continuar !== 's' && continuar !== 'n');
-    
-// } while (continuar === "s");
 
-    continuar = confirm("Desea realizar otra Operacion?")
-} while (continuar);
 
-console.log("Gracias por usar la calculadora");
 
+
+const productoX = new Producto(5, "Pepsi", 1250, 66);
+// productoX.sumarIva();
+// console.log(productoX.precio);
+
+productos.push(productoX);
+
+
+for (const producto of productos) {
+    producto.sumarIva();
+    console.log(`El Producto con ID: ${producto.id} es: ${producto.nombre}.- El Precio de ${producto.nombre} es de $${producto.precio}.- y existen ${producto.stock} Unidades.`);
+}
+
+
+// console.log(productos);

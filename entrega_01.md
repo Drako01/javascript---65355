@@ -1,61 +1,79 @@
-# Entrega 1
-## Estructura del simulador
-### Objetivos generales
+# Entrega 1: Estructura del Simulador
 
-Armar la estructura base del simulador
+## Objetivos Generales
 
-Integrar las herramientas JS aprendidas hasta aquí
+- Crear la estructura base del simulador.
+- Integrar las herramientas de JavaScript aprendidas hasta el momento.
 
-Objetivos específicos
+## Objetivos Específicos
 
-Declara variables, constantes y arrays
+1. Declarar variables, constantes y arrays.
+2. Crear una o más funciones en JavaScript que permitan interacción con el usuario.
+3. Incorporar ciclos de iteración y/o condicionales que aporten funcionalidad al proyecto.
+4. Utilizar la Consola de JavaScript y cuadros de diálogo como `Prompt`, `Confirm` y `Alert`.
 
-Crea una o más funciones JS que generen interacción
+## Requisitos de Entrega
 
-Agrega los ciclos de iteración y/o condicionales necesarios, para que tu proyecto funcione correctamente
+- **Documento HTML:** Al menos un archivo HTML que contenga una descripción breve de la idea general del simulador.
+- **Archivo JavaScript:** Referenciado correctamente en el archivo HTML.
 
-Integra el uso de la Consola JS y de los cuadros de diálogo Prompt, Confirm y Alert
+### Formato de Entrega
 
-Se debe entregar
+- Un archivo en formato `.zip` con la carpeta y los archivos del proyecto. El nombre del archivo debe seguir el formato: `Entregable1+Apellido`.
+- Si el proyecto incluye más de un archivo `.js` o `.css`, organizarlos en subcarpetas.
 
-Documento HTML (al menos uno)
+## Sugerencias
 
-Archivo JS referenciado en el HTML
+- Enfócate en la lógica de JavaScript en esta etapa, sin preocuparte demasiado por el diseño web.
+- No es necesario usar todos los condicionales ni todos los ciclos de iteración aprendidos. Emplea únicamente los que aporten valor a la lógica de tu aplicación.
+- Toda la interacción del simulador debe realizarse a través de la Consola de JavaScript.
+- Redacta mensajes claros para los cuadros de diálogo. Utiliza concatenación de textos con variables y saltos de línea para mejorar la legibilidad.
 
-Formato
+### Funciones
 
-Archivo en formato .ZIP con la carpeta y los archivos del proyecto. Debe contener el nombre “Entregable1+Apellido”
+- Crea al menos 3 funciones que sigan el algoritmo básico de cualquier programa:
+  1. **Entradas de datos:** Obtener datos del usuario.
+  2. **Procesamiento de datos:** Realizar cálculos o transformaciones con los datos ingresados.
+  3. **Salida de datos:** Mostrar los resultados al usuario.
+- Invoca todas las funciones creadas en tu simulador.
+- Emula funcionalidades más complejas, si es necesario, utilizando variables, constantes y/o arrays.
 
-Si usas más de un archivo JS y más de un archivo CSS, guarda los mismos en subcarpetas
+## Criterios de Evaluación
 
-Sugerencias
+### 1. Estructura HTML y Archivo JS
 
-En esta etapa ocúpate de realizar la mejor lógica de JS. No te esmeres en el diseño web
+- La estructura HTML debe estar completa y seguir buenas prácticas.
+- Puedes utilizar un **starter template de Bootstrap** u otro framework para agilizar la creación del HTML.
+- El archivo JavaScript debe estar correctamente referenciado en el HTML.
 
-No debes integrar todos los condicionales ni todos ciclos de iteración aprendidos.
-Solo aquellos que le aporten valor a la lógica de tu aplicación
+### 2. Algoritmos
 
-La interacción del simulador se hará íntegramente sobre la Consola JS
+- Deben incluir condicionales (`if`, `else`) y ciclos (`for`, `while`) implementados de manera óptima.
+- Reflejar lo aprendido en clase.
 
-Describe en el documento HTML con uno o dos párrafos, la idea general de tu simulador
+### 3. Funciones
 
-Crea al menos 3 funciones siguiendo el algoritmo básico de todo programa (entradas de datos, procesamiento de datos y mostrar los resultado de salida de los mismos.)
+- Los nombres de las funciones deben ser claros y descriptivos.
+- Las funciones deben estar correctamente estructuradas y generar un resultado esperado cuando se ejecuten.
+- Implementar funciones dinámicas que interactúen con los datos de entrada y produzcan salidas relevantes.
 
-Realizar llamadas(invocar) a las funciones que utilizaste en tu simulador
+### Aclaraciones
 
-Tu proyecto mutará cuando aprendas más características de JS. Lo que no puedas conseguir ahora, emúlalo de la mejor forma posible con variables, constantes y/o arrays
+- Puedes utilizar un **starter template de Bootstrap** para agilizar la creación del HTML.
+- También puedes aplicar JavaScript a archivos HTML desarrollados previamente, ya sea en este curso o en otros cursos.
 
-Define mensajes claros a mostrar en los cuadros de diálogo. Concatena textos con variables, y realiza saltos de línea en textos extensos. Esto facilitará su lectura
+---
 
-Criterios de evaluación
-Estructura HTML y archivo JS
-La estructura HTML está completa y ejecutada con buenas prácticas o utiliza el el starter template de Bootstrap u otro framework para el uso adecuado de HTML5 *. El archivo JS está correctamente referenciado en el HTML.
+¡Buena suerte con tu proyecto! 🚀
 
-Algoritmos
-Se utiliza algoritmo condicional y con ciclo (IF, bucles for) de manera óptima , reflejando lo aprendido en clase.
 
-Funciones
-Los nombres de las funciones son claros y dan a entender que acción realizan. Se emplea la estructura correcta para el armado de las mismas. Crea funciones dinámicas de manera correcta. Generan un resultado correcto cuando se ejecutan.
+<p align="center"> 
+    <img src="https://jobs.coderhouse.com/assets/logos_coderhouse.png" alt="CoderHouse"  height="100"/>
+</p>
 
-Aclaración
-Pueden utilizar el starter template de Bootstrap para agilizar el armado de la esrtuctura HTML en caso de que lo deseen. O pueden optar por aplicar JS a sus HTML desarollados por los propios estudiantes (ya sea en otros cursos o para este proyecto).
+
+
+
+---
+
+## [Autor: Alejandro Di Stefano](https://github.com/Drako01)

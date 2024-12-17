@@ -1,164 +1,211 @@
-// Arrays
-
-const miArrayDeNumeros = [1, 2, -10, 0, 2.2, 8, -14, 0, 1, 99];
-
-// console.log(typeof miArrayDeNumeros);
-
-// miArrayDeNumeros = [5];
-// console.log(miArrayDeNumeros);
-
-// Los Arrays tienen sus propios metodos (funciones)
-miArrayDeNumeros.push(5);
-miArrayDeNumeros.push(99);
-miArrayDeNumeros.push(10111);
-miArrayDeNumeros.pop(); // Elimina el ultimo indice 
-miArrayDeNumeros.shift(); // Elimina el 1er Elemento (No es recomendable)
-miArrayDeNumeros.unshift(1); // Agrega en el Indice 0 (No es recomendable)
-
-// console.log(miArrayDeNumeros);
-
-// console.log(miArrayDeNumeros.length); // Me devuelve un numero entero -> Es la cantidad de elementos de mi Array
-// console.log(miArrayDeNumeros[9]);
-// for(let i = 0; i < miArrayDeNumeros.length; i++) {
-//     console.log("En el indice: " + i + " esta el valor: " + miArrayDeNumeros[i]);
-// }
-
-// console.log(miArrayDeNumeros.join(" | "));
-
-// console.log(miArrayDeNumeros.indexOf(8)); // Retorna un numero entero -> Indice del elemento
-// console.log(miArrayDeNumeros.indexOf(2.2));
-// console.log(miArrayDeNumeros.indexOf(0));
-// console.log(miArrayDeNumeros.indexOf(99));
-// console.log(miArrayDeNumeros.indexOf(-99)); // Retorna -1 porque el valor no existe en el Array
-
-// console.log(miArrayDeNumeros.includes(0)); // Retorna true si existe
-// console.log(miArrayDeNumeros.includes(-99)); // Retorna false si no existe
-
-
-const miArrayDeStrings = ["Hola", "Mundo", "Coderhouse"];
-// for(let i = 0; i < miArrayDeStrings.length; i++) {
-//     console.log("En el indice: " + i + " esta el valor: " + miArrayDeStrings[i]);
-// }
-
-// console.log(miArrayDeStrings.includes("Coderhouse")); 
-// console.log(miArrayDeStrings);
-// console.log(miArrayDeStrings.sort()); // Ordena Alfabeticamente -> (No es recomendable)
-// console.log(miArrayDeStrings.sort().reverse()); // Ordena Alfabeticamente en forma Descendente-> (No es recomendable)
-
-// Objeto
-
-// const producto = {
+// Objetos
+// const persona1 = {
 //     id: 1,
-//     nombre: "Azucar",
-//     precio: 1200
+//     nombre: "Ana",
+//     apellido: "Salas",
+//     edad: 20,
+//     email: "ana@mail.com"
 // }
-// console.log(producto);
+// // console.log(persona1)
+
+// const persona2 = {
+//     id: 2,
+//     nombre: "Francisco",
+//     apellido: "Giardelli",
+//     edad: 24,
+//     email: "francisco@mail.com"
+// }
+// // console.log(persona2)
 
 
-// const productos = [
+// function Persona(persona){ // Pasamos un Objeto Literal
+//     this.id = persona.id,
+//     this.nombre = persona.nombre,
+//     this.apellido = persona.apellido,
+//     this.edad = persona.edad,
+//     this.email = persona.email
+// }
+
+// const personaLiteral = new Persona( // new genera una Nueva Instancia del Objeto Persona
 //     {
 //         id: 1,
-//         nombre: "Azucar",
-//         precio: 1200
-//     },
+//     nombre: "Ana",
+//     apellido: "Salas",
+//     edad: 20,
+//     email: "ana@mail.com"
+//     }
+// )
+
+// console.log(personaLiteral)
+
+// const personaLiteral2 = new Persona( // new genera una Nueva Instancia del Objeto Persona
 //     {
 //         id: 2,
-//         nombre: "Yerba",
-//         precio: 1890
-//     },
-//     {
-//         id: 3,
-//         nombre: "Café",
-//         precio: 6500
-//     },
-//     {
-//         id: 4,
-//         nombre: "Coca Cola",
-//         precio: 1950
-//     },
-//     {
-//         id: 5,
-//         nombre: "Pepsi",
-//         precio: 1750
+//         nombre: "Francisco",
+//         apellido: "Giardelli",
+//         edad: 24,
+//         email: "francisco@mail.com"
 //     }
-// ];
+// )
 
+// console.log(personaLiteral2)
 
-// console.log(productos[0].id);
-// console.log(productos[0].nombre);
-// console.log(productos[0].precio);
-
-// productos.push(
-//     {
-//         id: 6,
-//         nombre: "Harina",
-//         precio: 1500,
-//         stock: 12000
-//     }
-// );
-
-// const productoNuevo = {
-//     id: 7,
-//     pais: "Argentina",
-//     provincia: "Bs As",
-//     ciudad: "Quilmes",
-//     nombre: "Cafetera",
-//     precio: 199999.99,
-//     stock: 6
+// function Persona(id, nombre, apellido, edad, email){
+//     this.id = id,
+//     this.nombre = nombre,
+//     this.apellido = apellido,
+//     this.edad = edad,
+//     this.email = email
 // }
 
-// productos.push(productoNuevo);
-// productos.push(
-//     {
-//         id: 8,
-//         pais: "Argentina",
-//         provincia: "Bs As",
-//         ciudad: "Quilmes",
-//         nombre: "Cafetera",
-//         precio: 299000.99,
-//         stock: 16
+// const anaPersona = new Persona(1,"Ana", "Salas", 40, "ana@mail.com");
+
+
+// anaPersona.edad = 20;
+
+// anaPersona['email'] = "anasalas@mail.com";
+
+// console.log(anaPersona);
+
+// function Gato(nombre, edad, raza, color, peso){
+//     this.nombre = nombre,
+//     this.edad = edad,
+//     this.raza = raza,
+//     this.color = color,
+//     this.peso = peso
+// }
+
+// function Perro(nombre, edad, raza, color, peso){
+//     this.nombre = nombre,
+//     this.edad = edad,
+//     this.raza = raza,
+//     this.color = color,
+//     this.peso = peso
+// }
+
+// const gatito = new Gato("Michi", 4, "Gato", "Blanco", 3);
+// console.log(gatito);
+
+// const perrito = new Perro("Daisy", 4, "Yorki", "Beige", 2.5);
+// console.log(perrito);
+
+// class Mascota {
+//     constructor(tipo, nombre, edad, raza, color, peso) {
+//             this.tipo = tipo,
+//             this.nombre = nombre,
+//             this.edad = edad,
+//             this.raza = raza,
+//             this.color = color,
+//             this.peso = peso
 //     }
-// );
 
-// console.log(productos);
+//     caminar() {
+//         console.log("Mi " +  this.tipo + " " + this.nombre + " esta Caminado.!");
+//     }
 
-// Clase
-class Producto {
+//     comer() {
+//         console.log("Mi " +  this.tipo + " " + this.nombre + " esta Comiendo.!");
+//     }
+// }
 
-    constructor(id, nombre, precio, stock) {
-        this.id = id;
-        this.nombre = nombre
-        this.precio = precio
-        this.stock = stock
-    }
+// const perrito = new Mascota("Perro", "Daisy", 4, "Yorki", "Beige", 2.5);
+// const gatito = new Mascota("Gato", "Michi", 4, "Gato", "Blanco", 3);
+// console.log(perrito);
+// console.log(gatito);
 
-    sumarIva() {
-        this.precio = parseFloat((this.precio * 1.21).toFixed(2));
-    }
-}
+// function caminar() {
+//     console.log("Mi " +  perrito.tipo + " " + perrito.nombre + " esta Caminado.!");
+// };
 
-const productos = [];
+// perrito.caminar(); // Aca estamos invocando al metodo de la clase Mascota
+// gatito.caminar();
 
-productos.push(new Producto(1, "Azucar", 1250, 10));
-productos.push(new Producto(2, "Yerba", 1890, 35));
-productos.push(new Producto(3, "Café", 6500, 50));
-productos.push(new Producto(4, "Coca Cola", 1980, 180));
+// perrito.comer();
+// gatito.comer();
+
+// caminar();
+
+// Alamcenamiento
+
+// let mensaje = "Hola desde Coder";
+// let mensaje = "Hola desde Coderhouse";
+// localStorage.setItem('mensaje', mensaje);
+
+// // console.log(localStorage.getItem('mensaje'))
+
+// localStorage.setItem('numero', 1);
+// localStorage.setItem('booleans', true);
+
+// localStorage.setItem('Perro', perrito);
+// localStorage.setItem('Perro', JSON.stringify(perrito));
+// localStorage.setItem('Gato', JSON.stringify(gatito));
+// // const carrito = [];
+// // localStorage.setItem('carrito', carrito);
+
+// console.log(typeof perrito)
+// console.log(typeof JSON.stringify(perrito))
+
+// const perritoComoString = localStorage.getItem('Perro');
+// console.log(perritoComoString);
+
+// const perritoComoObject = JSON.parse(localStorage.getItem('Perro'));
+// console.log(perritoComoObject);
+
+// localStorage.removeItem('numero');
+// localStorage.removeItem('booleans');
+
+// localStorage.clear();
+
+// for (let i = 0; i < localStorage.length; i++){
+//     let clave = localStorage.key(i);
+//     console.log("Para la Clave : " + clave + "\nValor: " + localStorage.getItem(clave));
+// }
+
+// const guardarEnElLocalStorage = (clave, valor) => {
+//     localStorage.setItem(clave, valor)
+// }
+
+// function Perro(nombre, edad, raza, color, peso){
+//     this.nombre = nombre,
+//     this.edad = edad,
+//     this.raza = raza,
+//     this.color = color,
+//     this.peso = peso
+// }
+
+// const perrito = new Perro("Daisy", 4, "Yorki", "Beige", 2.5);
+
+// guardarEnElLocalStorage('Perro', JSON.stringify(perrito));
+
+// guardarEnElLocalStorage(perrito.nombre, JSON.stringify(perrito));
+
+// localStorage.clear();
 
 
+// const guardarEnElLocalStorage = (clave, valor) => {
+//     localStorage.setItem(clave, valor)
+// }
 
+// const perrito = new Mascota("Perro", "Daisy", 4, "Yorki", "Beige", 2.5);
+// const perrito1 = new Mascota("Perro", "Max", 6, "Collie", "Beige", 25);
+// const gatito = new Mascota("Gato", "Michi", 4, "Gato", "Blanco", 3);
+// const gatito1 = new Mascota("Gato", "Tom", 9, "Persa", "Negro", 5);
 
+// const arrayDeMascotas = []
 
-const productoX = new Producto(5, "Pepsi", 1250, 66);
-// productoX.sumarIva();
-// console.log(productoX.precio);
+// arrayDeMascotas.push(perrito);
+// arrayDeMascotas.push(perrito1, gatito, gatito1);
 
-productos.push(productoX);
+// console.log(arrayDeMascotas);
 
+// for (const mascota of arrayDeMascotas){
+//     guardarEnElLocalStorage(mascota.nombre, JSON.stringify(mascota));
+// }
 
-for (const producto of productos) {
-    producto.sumarIva();
-    console.log(`El Producto con ID: ${producto.id} es: ${producto.nombre}.- El Precio de ${producto.nombre} es de $${producto.precio}.- y existen ${producto.stock} Unidades.`);
-}
+// for (const mascota of arrayDeMascotas){
+//     guardarEnElLocalStorage('Mascota', JSON.stringify(mascota));
+// }
 
-
-// console.log(productos);
+// // for (const mascota of arrayDeMascotas){
+//     guardarEnElLocalStorage('Mascotas', JSON.stringify(arrayDeMascotas));
+// // }

@@ -1,223 +1,183 @@
-// Clase 06
+// console.log(document);
 
-// Funciones de Orden Superior
+const d = document;
+// console.log(d.head);
+// console.log(d.body);
 
-// function operarNumeros(a, b, operacion) {
-//     return operacion(a, b);
-// }
+const title = d.getElementById('titulo').innerText; // Trae solo 1 dato
+// console.log(title);
 
-// const operarNumeros = (a, b, operacion) => operacion(a, b);
+const titulo = d.getElementsByTagName('title') // Trae un Array da tags
 
-// const suma = (x, y) => x + y;
-// const resta = (x, y) => x - y;
-// const multiplicacion = (x, y) => x * y;
-// const division = (x, y) => {
-//     if (y === 0) {
-//         return "Error: No se puede dividir por Cero";
-//     }
-//     return x / y;
-// }
+// console.log(titulo[0]);
 
-// console.log(operarNumeros(5, 52, suma));
-// console.log(operarNumeros(5, 52, resta));
-// console.log(operarNumeros(5, 52, multiplicacion));
-// console.log(operarNumeros(5, 52, division));
-// console.log(operarNumeros(5, 0, division));
+titulo[0].innerText = title;
 
+const contenedores = d.getElementsByClassName('contenedor');
 
-// Arrays
+// console.log(contenedores);
 
-// const myArray = [1, 2, 3]; 
+contenedores[0].innerHTML = `<h2>Contenedor <strong>1</strong></h2>`;
 
+const personasArray = [
+    "Ana",
+    "Gonzalo",
+    "Francisco",
+    "Guillermo",
+    "Jose",
+    "Alejandro"
+];
 
 
-// // myArray = 4;
-// // console.log(myArray);
+function cargarNombresAlDOM() {
 
-// myArray.push(4);
-// console.log(myArray);
-// console.log(myArray[2]);
-// console.log(myArray.length);
+    const tituloLocal = "Personas Cargadas";
+    d.getElementById('tituloPersonas').innerHTML = tituloLocal;
 
-// const stringArray = ["Hola", "Mundo"];
-// stringArray.push("Coder"); // Se agrega al final
-// stringArray.push("JavaScript");
-// console.log(stringArray);
-// console.log(stringArray.sort());
+    const personasUl = d.getElementById('personas');
+    for (const persona of personasArray) {
+        let li = d.createElement('li');
+        li.innerHTML = `<h4>Nombre: ${persona}</h4>`;
+        personasUl.appendChild(li);
+    }
 
+}
 
+cargarNombresAlDOM();
 
+const arrayDeObjetos = [];
+const cargarObjetosDelArrayAlDOM = () => {
 
-// const myArray = [1, 2, 3, 5, -10, 9, 0, 9, -10, 100, 80, 0]; 
-// console.log(myArray);
-// console.log(myArray);
-// myArray.forEach((num) => {
-//     console.log(num);
-// })
+    const productos = [
+        {
+            id: 1,
+            nombre: "Azucar",
+            precio: 1890
+        },
+        {
+            id: 2,
+            nombre: "Yerba",
+            precio: 2156
+        },
+        {
+            id: 3,
+            nombre: "Café",
+            precio: 3900
+        },
+        {
+            id: 4,
+            nombre: "Coca Cola",
+            precio: 1850
+        },
+        {
+            id: 5,
+            nombre: "Pepsi",
+            precio: 1740
+        },
+    ]
 
-// myArray.forEach((num, i) => {
-//     console.log(`Para el Indice: ${i}, el número es: ${num}`);
-// })
+    let main = d.getElementById('main');
+    let secctionDelMain = d.createElement('section');
 
-// myArray.forEach((num, i , array) => {
-//     array[i] = num * 2;
-// })
+    let lista = d.createElement('ul');
 
-// console.log(myArray);
+    productos.forEach(producto => {
+        let item = d.createElement('li');
+        item.innerHTML = `ID: ${producto.id}, Nombre: ${producto.nombre}, Precio: $${producto.precio}.-`;
+        lista.appendChild(item);
+    })
 
-// const stringArray = ["Hola", "Mundo", "Coder"];
-// const inventario = {};
+    secctionDelMain.appendChild(lista);
 
-// stringArray.forEach((palabra, indice) => {
-//     inventario[indice] = palabra;
-// })
+    main.appendChild(secctionDelMain);
+}
 
-// console.log(inventario);
+cargarObjetosDelArrayAlDOM();
 
-// filter
+const cuerpo = d.body;
+const boton = d.querySelector('#boton');
 
-// const cursos = [
-//     {nombre: "JavaScript", precio: 190000},
-//     {nombre: "React", precio: 170000},
-//     {nombre: "Angular", precio: 175000},
-//     {nombre: "SQL", precio: 120000},
-//     {nombre: "BackEnd", precio: 360000},
-// ]
+boton.addEventListener('click', () => {
+    cuerpo.style.backgroundColor = "black";
+    cuerpo.style.color = "white";
+})
 
-// console.log(cursos);
+contenedores[0].addEventListener('mouseover', () => {
+    let h4C1 = contenedores[0].querySelector('h2');
+    h4C1.style.color = "green";
+})
 
-// const cursosEconomicos = cursos.filter((curso) => curso.precio < 175000);
-// const cursosCaros = cursos.filter((curso) => curso.precio >= 175000);
-// console.log(cursosEconomicos);
-// console.log(cursosCaros);
+contenedores[1].addEventListener('mouseover', () => {
+    let h4C1 = contenedores[1].querySelector('h4');
+    h4C1.style.color = "blue";
+})
 
-// const myArray = [1, 2, 3, 5, -10, 9, 0, 9, -10, 100, 80, 0]; 
+contenedores[2].addEventListener('mouseover', () => {
+    let h4C1 = contenedores[2].querySelector('h4');
+    h4C1.style.color = "red";
+})
 
-// const myArrayFiltrado = myArray.filter((num) => num > 10);
-// console.log(myArrayFiltrado);
+contenedores[3].addEventListener('mouseover', () => {
+    let h4C1 = contenedores[3].querySelector('h4');
+    h4C1.style.color = "yellow";
+})
 
+const productos = [
+    {
+        id: 1,
+        nombre: "Azucar",
+        precio: 1890
+    },
+    {
+        id: 2,
+        nombre: "Yerba",
+        precio: 2156
+    },
+    {
+        id: 3,
+        nombre: "Café",
+        precio: 3900
+    },
+    {
+        id: 4,
+        nombre: "Coca Cola",
+        precio: 1850
+    },
+    {
+        id: 5,
+        nombre: "Pepsi",
+        precio: 1740
+    },
+]
 
-// Map
+let buttonGreen = d.querySelectorAll('.button_grey')[1];
 
-// const frutas = ["Banana", "Anana", "Pera", "Manzana", "Mandarina"];
+let indice = 0;
 
-// const frutasMayuscula = frutas.map((fruta) => fruta.toUpperCase());
-// console.log(frutas);
-// console.log(frutasMayuscula);
+buttonGreen.addEventListener('click', () => {
 
+    const listaDeProductos = d.querySelector('#productos-click');
+    if (indice < productos.length) {
+        let item = d.createElement('li');
 
-// const myArray = [1, 2, 3, 5, -10, 9, 0, 9, -10, 100, 80, 0]; 
-// const myArrayDuplicado = myArray.map((num) => num * 2);
-// console.log(myArrayDuplicado);
+        const objeto = productos[indice];
 
-// const cursos = [
-//     {nombre: "JavaScript", precio: 190000},
-//     {nombre: "React", precio: 170000},
-//     {nombre: "Angular", precio: 175000},
-//     {nombre: "SQL", precio: 120000},
-//     {nombre: "BackEnd", precio: 360000},
-// ]
-
-// console.log(cursos);
-
-// const nombreDeCusrsos = cursos.map((curso) => curso.nombre);
-
-// const preciosDeCusrsos = cursos.map((curso) => curso.precio);
-
-// console.log(nombreDeCusrsos);
-// console.log(preciosDeCusrsos);
-
-
-// const booleanos = [true , true, false, true , false, false , false, true];
-// console.log(booleanos);
-
-// const booleanoATexto = booleanos.map((valor) => {
-//     if(valor) {
-//         return "Verdadero"
-//     } else {
-//         return "Falso"
-//     }
-// })
-// console.log(booleanoATexto);
-
-// const productos = [
-//     {id: 1, nombre: "Azucar", precio: 1800, disponible: true},
-//     {id: 2, nombre: "Yerba", precio: 1980, disponible: true},
-//     {id: 3, nombre: "Cafe", precio: 3600, disponible: false},
-//     {id: 4, nombre: "Coca Cola", precio: 1400, disponible: true},
-//     {id: 5, nombre: "Pepsi", precio: 1350, disponible: false},
-//     {id: 6, nombre: "Harina", precio: 900, disponible: true},
-// ]
-
-// const stock = productos.map((producto) => {
-//     let disponibilidad = "";
-//     if(producto.disponible){
-//         disponibilidad = "Tiene Stock"
-//     } else {
-//         disponibilidad = "Sin Stock"
-//     }
-
-//     return `El Producto ${producto.nombre} ${disponibilidad} - Valor. $${producto.precio}.-`
-// })
-
-// console.log(stock);
-
-
-// Reduce
-// const myArray = [1, 2, 3, 5, -10, 9, 0, 9, -10, 100, 80, 0]; 
-
-// const sumaDeElementosDeMyArray = myArray.reduce((acumulador, numero) => acumulador + numero, 0);
-
-// console.log(sumaDeElementosDeMyArray);
-
-
-// const cursos = [
-//     {nombre: "JavaScript", precio: 190000},
-//     {nombre: "React", precio: 170000},
-//     {nombre: "Angular", precio: 175000},
-//     {nombre: "SQL", precio: 120000},
-//     {nombre: "BackEnd", precio: 360000},
-// ]
-
-// const cursosObjeto = cursos.reduce((acc, curso) =>{
-//     acc[curso.nombre] = curso.precio
-//     return acc
-// }, {});
-
-// console.log(cursos)
-// console.log(cursosObjeto)
+        item.innerHTML = `
+                            <div class="card" style="width: 18rem;">
+                                <img src="/img/1387.png" class="card-img-top" alt="${objeto.nombre}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${objeto.nombre}</h5>
+                                    <p class="card-text">Precio: $${objeto.precio}.-</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        `
 
 
-// const frutas = ["Banana", "Anana", "Banana", "Banana", "Pera", "Manzana", "Mandarina", "Pera", "Mandarina"];
+        listaDeProductos.appendChild(item);
 
-// const frutasNuevo = frutas.reduce((acc, fruta) => {
-//     acc[fruta] = (acc[fruta] || 0) + 1
-//     return acc;
-// }, {})
-
-// console.log(frutasNuevo);
-
-
-// const carrito = [
-//     {id: 1, nombre: "Azucar", precio: 1800, disponible: true, cantidad: 18},
-//     {id: 2, nombre: "Yerba", precio: 1980, disponible: true, cantidad: 54},
-//     {id: 3, nombre: "Cafe", precio: 3600, disponible: false, cantidad: 12},
-//     {id: 4, nombre: "Coca Cola", precio: 1400, disponible: true, cantidad: 10},
-//     {id: 5, nombre: "Pepsi", precio: 1350, disponible: false, cantidad: 33},
-//     {id: 6, nombre: "Harina", precio: 900, disponible: true, cantidad: 51},
-// ]
-// // console.log(carrito);
-// const resumenCarrito = carrito.reduce((acc, item) => {
-//     if(acc[item.nombre]){
-//         acc[item.nombre].cantidad += item.cantidad
-//     } else {
-//         acc[item.nombre] = {
-//             id: item.id,
-//             nombre: item.nombre,
-//             cantidad: item.cantidad
-//         }
-//     }
-//     return acc;
-// }, {})
-
-// console.log(resumenCarrito);
+        indice++;
+    } else {
+        alert("Todos los productos fueron agregados.!")
+    }
+})

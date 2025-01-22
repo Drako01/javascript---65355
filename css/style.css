@@ -1,0 +1,156 @@
+.productos-container ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+footer,
+.navbar nav {
+    height: 3.5rem;
+}
+
+footer,
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.navbar nav ul li {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.navbar nav ul li a {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: black;
+    margin-left: 1rem;
+}
+
+.navbar nav ul li a:hover {
+    color: chocolate;
+}
+
+.navbar nav ul li img {
+    height: 3.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+footer {
+    background-color: #c2c2c2;
+    position: sticky;
+    bottom: 0;
+}
+
+footer p {
+    text-align: center;
+}
+
+
+.botonera {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.botonera button {
+    background-color: chocolate;
+    width: 6rem;
+    border: none;
+    border-radius: .25rem;
+    color: white;
+    font-size: 1rem;
+}
+
+.slide {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2rem;
+    width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide li {
+    display: none;
+    flex: 0 0 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide li img {
+    width: 1080px;
+    height: 640px;
+    border-radius: 1rem;
+}
+
+.slide li.active {
+    display: block;
+}
+
+.control {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.div-busqueda{
+    padding: 2rem;
+}
+.busqueda{
+    min-width: 240px;
+    margin: 1rem;
+}
+.tarjetas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 4rem;
+}
+.card{
+    align-items: center;
+}
+.card img{
+    width: 16rem;
+    padding: .5rem;
+}

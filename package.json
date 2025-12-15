@@ -1,0 +1,32 @@
+{
+  "name": "javascript_65355_coderhouse",
+  "version": "1.0.0",
+  "description": "Esta aplicacion muestra a los alumnos del Curso como empezar una App en NodeJS",
+  "main": "index.js",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drako01/javascript---65355.git"
+  },
+  "keywords": [
+    "CoderHouse",
+    "App",
+    "Node",
+    "Javascript"
+  ],
+  "author": "Alejandro Di Stefano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Drako01/javascript---65355/issues"
+  },
+  "homepage": "https://github.com/Drako01/javascript---65355#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}
